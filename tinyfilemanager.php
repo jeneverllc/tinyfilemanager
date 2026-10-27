@@ -1889,7 +1889,7 @@ if (isset($_GET['view'])) {
                     </form>
                 <?php
                 }
-                if ($is_text && !FM_READONLY) {
+                if (($is_text || $is_md) && !FM_READONLY) {
                 ?>
                     <a class="fw-bold btn btn-outline-primary" href="?p=<?php echo urlencode(trim(FM_PATH)) ?>&amp;edit=<?php echo urlencode($file) ?>" class="edit-file">
                         <i class="fa fa-pencil-square"></i> <?php echo lng('Edit') ?>
